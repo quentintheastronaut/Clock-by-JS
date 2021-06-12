@@ -1,23 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header/Header';
+import Body from './components/Body/Body';
+import SoundCloudWidget from './components/ SoundCloud/SoundCloudWidget';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom"
+import Setting from './pages/Setting'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Header />
+        <Switch>
+          <Route path="/setting">
+            <Setting />
+          </Route>
+          <Route default path="/">
+            <Body />
+          </Route>
+        </Switch>
+        <SoundCloudWidget />
+      </Router>
     </div>
   );
 }

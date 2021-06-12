@@ -1,5 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@600&display=swap');
+
+html {
+  background-image: url('/src/assets/img/bg.jpg');
+  background-size: cover;
+  background-repeat: repeat;
+  font-family: 'Baloo Tammudu 2', cursive;
+}
+
+p {
+  margin: 0 0;
+  padding: 0 0;
+  line-height: 20px;
+}
+
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Baloo Tammudu 2', cursive;
 }
 
 .App-logo {
@@ -14,7 +34,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
